@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ColorPilot - Live UI Color Controller",
+  "version": "0.4.0",
+  "description": "Extract the colors of any web page, assign roles (primary, secondary...), and change them live from a floating controller. Export as CSS variables or Tailwind.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Toggle ColorPilot (Alt+Shift+C)",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+C" },
+      "description": "Toggle ColorPilot"
+    }
+  }
+}
